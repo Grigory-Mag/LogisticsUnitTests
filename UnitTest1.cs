@@ -67,7 +67,7 @@ namespace UnitTests
         DriverLicenceObject driverLicenceObject = new DriverLicenceObject()
         {
             Id = 1,
-            Date = Timestamp.FromDateTime(DateTime.Now),
+            Date = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime().ToUniversalTime()),
             Number = 1234,
             Series = 1241
         };
@@ -84,7 +84,7 @@ namespace UnitTests
         {
             Id = 1,
             Cargo = 1,
-            Date = Timestamp.FromDateTime(DateTime.Now)
+            Date = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime())
         };
         OwnershipsObject ownershipsObject = new OwnershipsObject()
         {
