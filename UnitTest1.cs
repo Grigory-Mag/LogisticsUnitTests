@@ -378,7 +378,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetDriverAsync(new GetOrDeleteDriversRequest { Id = DriversIdExists });
+                var item = await client.DeleteDriverAsync(new GetOrDeleteDriversRequest { Id = DriversIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -395,7 +395,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetOrderAsync(new GetOrDeleteOrdersRequest { Id = OrdersIdExists });
+                var item = await client.DeleteOrderAsync(new GetOrDeleteOrdersRequest { Id = OrdersIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -412,7 +412,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetOwnershipAsync(new GetOrDeleteOwnershipsRequest { Id = OwnershipsIdExists });
+                var item = await client.DeleteOwnershipAsync(new GetOrDeleteOwnershipsRequest { Id = OwnershipsIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -429,7 +429,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetRequestAsync(new GetOrDeleteRequestObjRequest { Id = RequestsIdExists });
+                var item = await client.DeleteRequestAsync(new GetOrDeleteRequestObjRequest { Id = RequestsIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -446,7 +446,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetRequisiteAsync(new GetOrDeleteRequisitesRequest { Id = RequisitesIdExists });
+                var item = await client.DeleteRequisiteAsync(new GetOrDeleteRequisitesRequest { Id = RequisitesIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -463,7 +463,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetTransporterAsync(new GetOrDeleteTransportersRequest { Id = TransportersIdExists });
+                var item = await client.DeleteTransporterAsync(new GetOrDeleteTransportersRequest { Id = TransportersIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -480,7 +480,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetVehiclesTypeAsync(new GetOrDeleteVehiclesTypesRequest { Id = VehicleTypesIdExists });
+                var item = await client.DeleteVehiclesTypeAsync(new GetOrDeleteVehiclesTypesRequest { Id = VehicleTypesIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -497,7 +497,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetVehiclesTransporterAsync(new GetOrDeleteVehiclesTransportersRequest
+                var item = await client.DeleteVehiclesTransporterAsync(new GetOrDeleteVehiclesTransportersRequest
                 { IdTransporter = VehicleTransportersTransporterIdExists, IdVehicle = VehicleTransportersVehicleIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Transporter);
