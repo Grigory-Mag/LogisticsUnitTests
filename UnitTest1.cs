@@ -206,7 +206,6 @@ namespace UnitTests
                 ExceptionsHandler(ex);
                 return await Task.FromResult(-1);
             }
-
         }
 
         [Test(ExpectedResult = CargoTypesIdExists)]
@@ -452,6 +451,23 @@ namespace UnitTests
                 return await Task.FromResult(-1);
             }
 
+        }
+
+        [Test(ExpectedResult = CargoConstraintsCargoIdExists)]
+        public async Task<int> DeleteCargoConstraintsById_Existing()
+        {
+            try
+            {
+                var item = await client.DeleteCargoConstraintAsync(new GetOrDeleteCargoConstraintsRequest
+                { IdCargo = CargoConstraintsCargoIdExists, IdConstraint = CargoConstraintsConstraintIdExists });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.IdCargo);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
         }
 
         [Test(ExpectedResult = CargoTypesIdExists)]
@@ -714,6 +730,22 @@ namespace UnitTests
                 return await Task.FromResult(-1);
             }
 
+        }
+
+        [Test(ExpectedResult = CargoConstraintsCargoIdExists)]
+        public async Task<int> CreateCargoConstraintsById_Existing()
+        {
+            try
+            {
+                var item = await client.CreateCargoConstraintAsync(new CreateOrUpdateCargoConstraintsRequest { CargoConstraints = cargoConstraintsObject});
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.IdCargo);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
         }
 
         [Test(ExpectedResult = ConstraintsIdExists)]
