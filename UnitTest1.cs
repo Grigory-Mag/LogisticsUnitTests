@@ -279,9 +279,10 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.GetVehiclesTransporterAsync(new GetOrDeleteVehiclesTransportersRequest { Id = VehicleTransportersTransporterIdExists });
+                var item = await client.GetVehiclesTransporterAsync(new GetOrDeleteVehiclesTransportersRequest 
+                { IdTransporter = VehicleTransportersTransporterIdExists, IdVehicle = VehicleTransportersVehicleIdExists });
                 Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
+                return await Task.FromResult(item.Transporter);
             }
             catch (RpcException ex)
             {
