@@ -61,7 +61,7 @@ namespace UnitTests
          */
 
         [Test(ExpectedResult = Data.CargoIdExists)]
-        public async Task<int> GetCargoById_Existing()
+        public async Task<int> GetCargoById_Exists()
         {
             try
             {
@@ -78,7 +78,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
-        public async Task<int> GetCargoConstraintsById_Existing()
+        public async Task<int> GetCargoConstraintsById_Exists()
         {
             try
             {
@@ -95,7 +95,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoTypesIdExists)]
-        public async Task<int> GetCargoTypesById_Existing()
+        public async Task<int> GetCargoTypesById_Exists()
         {
             try
             {
@@ -112,7 +112,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.ConstraintsIdExists)]
-        public async Task<int> GetConstraintsById_Existing()
+        public async Task<int> GetConstraintsById_Exists()
         {
             try
             {
@@ -129,7 +129,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CustomersIdExists)]
-        public async Task<int> GetCustomerById_Existing()
+        public async Task<int> GetCustomerById_Exists()
         {
             try
             {
@@ -146,7 +146,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriverLicenceIdExists)]
-        public async Task<int> GetDriverLicenceById_Existing()
+        public async Task<int> GetDriverLicenceById_Exists()
         {
             try
             {
@@ -163,7 +163,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriversIdExists)]
-        public async Task<int> GetDriverById_ExistingDriver()
+        public async Task<int> GetDriverById_ExistsDriver()
         {
             try
             {
@@ -180,7 +180,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OrdersIdExists)]
-        public async Task<int> GetOrdersById_Existing()
+        public async Task<int> GetOrdersById_Exists()
         {
             try
             {
@@ -197,7 +197,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OwnershipsIdExists)]
-        public async Task<int> GetOwnershipsById_Existing()
+        public async Task<int> GetOwnershipsById_Exists()
         {
             try
             {
@@ -214,7 +214,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequestsIdExists)]
-        public async Task<int> GetRequestsById_Existing()
+        public async Task<int> GetRequestsById_Exists()
         {
             try
             {
@@ -231,7 +231,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequisitesIdExists)]
-        public async Task<int> GetRequisitesById_Existing()
+        public async Task<int> GetRequisitesById_Exists()
         {
             try
             {
@@ -248,7 +248,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.TransportersIdExists)]
-        public async Task<int> GetTransportersById_Existing()
+        public async Task<int> GetTransportersById_Exists()
         {
             try
             {
@@ -265,7 +265,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTypesIdExists)]
-        public async Task<int> GetVehicleTypesById_Existing()
+        public async Task<int> GetVehicleTypesById_Exists()
         {
             try
             {
@@ -282,7 +282,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehiclesIdExists)]
-        public async Task<int> GetVehicleById_Existing()
+        public async Task<int> GetVehicleById_Exists()
         {
             try
             {
@@ -299,7 +299,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
-        public async Task<int> GetVehicleTransporterById_Existing()
+        public async Task<int> GetVehicleTransporterById_Exists()
         {
             try
             {
@@ -323,7 +323,7 @@ namespace UnitTests
          */
 
         [Test(ExpectedResult = Data.CargoIdExists)]
-        public async Task<int> DeleteCargoById_Existing()
+        public async Task<int> DeleteCargoById_Exists()
         {
             try
             {
@@ -340,7 +340,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
-        public async Task<int> DeleteCargoConstraintsById_Existing()
+        public async Task<int> DeleteCargoConstraintsById_Exists()
         {
             try
             {
@@ -357,7 +357,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoTypesIdExists)]
-        public async Task<int> DeleteCargoTypesById_Existing()
+        public async Task<int> DeleteCargoTypesById_Exists()
         {
             try
             {
@@ -374,7 +374,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.ConstraintsIdExists)]
-        public async Task<int> DeleteConstraintsById_Existing()
+        public async Task<int> DeleteConstraintsById_Exists()
         {
             try
             {
@@ -391,7 +391,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CustomersIdExists)]
-        public async Task<int> DeleteCustomerById_Existing()
+        public async Task<int> DeleteCustomerById_Exists()
         {
             try
             {
@@ -408,7 +408,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriverLicenceIdExists)]
-        public async Task<int> DeleteDriverLicenceById_Existing()
+        public async Task<int> DeleteDriverLicenceById_Exists()
         {
             try
             {
@@ -425,7 +425,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriversIdExists)]
-        public async Task<int> DeleteDriverById_ExistingDriver()
+        public async Task<int> DeleteDriverById_ExistsDriver()
         {
             try
             {
@@ -442,7 +442,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OrdersIdExists)]
-        public async Task<int> DeleteOrdersById_Existing()
+        public async Task<int> DeleteOrdersById_Exists()
         {
             try
             {
@@ -459,7 +459,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OwnershipsIdExists)]
-        public async Task<int> DeleteOwnershipsById_Existing()
+        public async Task<int> DeleteOwnershipsById_Exists()
         {
             try
             {
@@ -476,7 +476,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequestsIdExists)]
-        public async Task<int> DeleteRequestsById_Existing()
+        public async Task<int> DeleteRequestsById_Exists()
         {
             try
             {
@@ -493,7 +493,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequisitesIdExists)]
-        public async Task<int> DeleteRequisitesById_Existing()
+        public async Task<int> DeleteRequisitesById_Exists()
         {
             try
             {
@@ -510,7 +510,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.TransportersIdExists)]
-        public async Task<int> DeleteTransportersById_Existing()
+        public async Task<int> DeleteTransportersById_Exists()
         {
             try
             {
@@ -527,7 +527,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTypesIdExists)]
-        public async Task<int> DeleteVehicleTypesById_Existing()
+        public async Task<int> DeleteVehicleTypesById_Exists()
         {
             try
             {
@@ -544,7 +544,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehiclesIdExists)]
-        public async Task<int> DeleteVehicleById_Existing()
+        public async Task<int> DeleteVehicleById_Exists()
         {
             try
             {
@@ -561,7 +561,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
-        public async Task<int> DeleteVehicleTransporterById_Existing()
+        public async Task<int> DeleteVehicleTransporterById_Exists()
         {
             try
             {
@@ -585,7 +585,7 @@ namespace UnitTests
          */
         
         [Test(ExpectedResult = Data.CargoIdExists)]
-        public async Task<int> CreateCargoById_Existing()
+        public async Task<int> CreateCargoById_Exists()
         {
             try
             {
@@ -602,7 +602,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoTypesIdExists)]
-        public async Task<int> CreateCargoTypesById_Existing()
+        public async Task<int> CreateCargoTypesById_Exists()
         {
             try
             {
@@ -619,7 +619,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
-        public async Task<int> CreateCargoConstraintsById_Existing()
+        public async Task<int> CreateCargoConstraintsById_Exists()
         {
             try
             {
@@ -635,7 +635,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.ConstraintsIdExists)]
-        public async Task<int> CreateConstraintsById_Existing()
+        public async Task<int> CreateConstraintsById_Exists()
         {
             try
             {
@@ -652,7 +652,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.CustomersIdExists)]
-        public async Task<int> CreateCustomerById_Existing()
+        public async Task<int> CreateCustomerById_Exists()
         {
             try
             {
@@ -669,7 +669,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriverLicenceIdExists)]
-        public async Task<int> CreateDriverLicenceById_Existing()
+        public async Task<int> CreateDriverLicenceById_Exists()
         {
             try
             {
@@ -686,7 +686,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.DriversIdExists)]
-        public async Task<int> CreateDriverById_ExistingDriver()
+        public async Task<int> CreateDriverById_ExistsDriver()
         {
             try
             {
@@ -703,7 +703,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OrdersIdExists)]
-        public async Task<int> CreateOrdersById_Existing()
+        public async Task<int> CreateOrdersById_Exists()
         {
             try
             {
@@ -720,7 +720,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.OwnershipsIdExists)]
-        public async Task<int> CreateOwnershipsById_Existing()
+        public async Task<int> CreateOwnershipsById_Exists()
         {
             try
             {
@@ -737,7 +737,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequestsIdExists)]
-        public async Task<int> CreateRequestsById_Existing()
+        public async Task<int> CreateRequestsById_Exists()
         {
             try
             {
@@ -754,7 +754,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.RequisitesIdExists)]
-        public async Task<int> CreateRequisitesById_Existing()
+        public async Task<int> CreateRequisitesById_Exists()
         {
             try
             {
@@ -771,7 +771,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.TransportersIdExists)]
-        public async Task<int> CreateTransportersById_Existing()
+        public async Task<int> CreateTransportersById_Exists()
         {
             try
             {
@@ -788,7 +788,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTypesIdExists)]
-        public async Task<int> CreateVehicleTypesById_Existing()
+        public async Task<int> CreateVehicleTypesById_Exists()
         {
             try
             {
@@ -805,7 +805,7 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehiclesIdExists)]
-        public async Task<int> CreateVehicleById_Existing()
+        public async Task<int> CreateVehicleById_Exists()
         {
             try
             {
@@ -822,11 +822,270 @@ namespace UnitTests
         }
 
         [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
-        public async Task<int> CreateVehicleTransporterById_Existing()
+        public async Task<int> CreateVehicleTransporterById_Exists()
         {
             try
             {
                 var item = await client.CreateVehiclesTransporterAsync(new CreateOrUpdateVehiclesTransportersRequest{ VehicleTransporters = Data.vehiclesTransportersObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Transporter);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        /*
+         * [      TESTS          ]
+         * [   UPDATE REQUESTS   ]
+         */
+
+        [Test(ExpectedResult = Data.CargoIdExists)]
+        public async Task<int> UpdateCargoById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateCargoAsync(new CreateOrUpdateCargoRequest { Cargo = Data.cargoObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.CargoTypesIdExists)]
+        public async Task<int> UpdateCargoTypesById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateCargoTypeAsync(new CreateOrUpdateCargoTypesRequest { CargoType = Data.cargoTypesObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
+        public async Task<int> UpdateCargoConstraintsById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateCargoConstraintAsync(new CreateOrUpdateCargoConstraintsRequest { CargoConstraints = Data.cargoConstraintsObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.IdCargo);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+        }
+
+        [Test(ExpectedResult = Data.ConstraintsIdExists)]
+        public async Task<int> UpdateConstraintsById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateConstraintsAsync(new CreateOrUpdateConstraintsRequest { Constraint = Data.constraintsObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.CustomersIdExists)]
+        public async Task<int> UpdateCustomerById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateCustomerAsync(new CreateOrUpdateCustomersRequest { Customer = Data.customersObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.DriverLicenceIdExists)]
+        public async Task<int> UpdateDriverLicenceById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateDriverLicenceAsync(new CreateOrUpdateDriverLicenceRequest { DriverLicence = Data.driverLicenceObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.DriversIdExists)]
+        public async Task<int> UpdateDriverById_ExistsDriver()
+        {
+            try
+            {
+                var item = await client.UpdateDriverAsync(new CreateOrUpdateDriversRequest { Driver = Data.driversObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.OrdersIdExists)]
+        public async Task<int> UpdateOrdersById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateOrderAsync(new CreateOrUpdateOrdersRequest { Order = Data.ordersObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.OwnershipsIdExists)]
+        public async Task<int> UpdateOwnershipsById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateOwnershipAsync(new CreateOrUpdateOwnershipsRequest { Ownership = Data.ownershipsObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.RequestsIdExists)]
+        public async Task<int> UpdateRequestsById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateRequestAsync(new CreateOrUpdateRequestObjRequest { Requests = Data.requestsObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.RequisitesIdExists)]
+        public async Task<int> UpdateRequisitesById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateRequisiteAsync(new CreateOrUpdateRequisitesRequest { Requisite = Data.requisitesObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.TransportersIdExists)]
+        public async Task<int> UpdateTransportersById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateTransporterAsync(new CreateOrUpdateTransportersRequest { Transporter = Data.transportersObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.VehicleTypesIdExists)]
+        public async Task<int> UpdateVehicleTypesById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateVehiclesTypeAsync(new CreateOrUpdateVehiclesTypesRequest { VehiclesTypes = Data.vehiclesTypesObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.VehiclesIdExists)]
+        public async Task<int> UpdateVehicleById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateVehicleAsync(new CreateOrUpdateVehiclesRequest { Vehicle = Data.vehiclesObject });
+                Assert.Pass($"{item}");
+                return await Task.FromResult(item.Id);
+            }
+            catch (RpcException ex)
+            {
+                ExceptionsHandler(ex);
+                return await Task.FromResult(-1);
+            }
+
+        }
+
+        [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
+        public async Task<int> UpdateVehicleTransporterById_Exists()
+        {
+            try
+            {
+                var item = await client.UpdateVehiclesTransporterAsync(new CreateOrUpdateVehiclesTransportersRequest { VehicleTransporters = Data.vehiclesTransportersObject });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Transporter);
             }
