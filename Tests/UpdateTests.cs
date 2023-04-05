@@ -11,7 +11,7 @@ namespace UnitTests
         const string NETWORK_ERROR = "#";
         const string UNEXPECTED_FAIL = "3#";
 
-        private UserService.UserServiceClient client = new UserService.UserServiceClient(GrpcChannel.ForAddress("http://localhost:5088"));
+        private UserService.UserServiceClient client = Data.client;
 
         private void ExceptionsHandler(RpcException ex)
         {

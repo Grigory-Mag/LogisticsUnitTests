@@ -8,13 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace UnitTests
 {
     internal class GetTests
     {
 
-        private UserService.UserServiceClient client = new UserService.UserServiceClient(GrpcChannel.ForAddress("http://localhost:5088"));
+        private UserService.UserServiceClient client = Data.client;
 
         const string NETWORK_ERROR = "#";
         const string UNEXPECTED_FAIL = "3#";
@@ -44,6 +45,7 @@ namespace UnitTests
         [Test(ExpectedResult = Data.CargoIdExists)]
         public async Task<int> GetCargoById_Exists()
         {
+            Debug.WriteLine("********** Pupa ************");
             try
             {
                 var item = await client.GetCargoAsync(new GetOrDeleteCargoRequest { Id = Data.CargoIdExists });

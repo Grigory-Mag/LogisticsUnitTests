@@ -1,8 +1,12 @@
 ﻿using ApiService;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +14,8 @@ namespace LogisticsUnitTests.Data
 {
     public static class Data
     {
+        public static UserService.UserServiceClient client = new UserService.UserServiceClient(GrpcChannel.ForAddress(GetDbConnection()));
+
         public const int CargoIdExists = 1;
         public const int CargoConstraintsCargoIdExists = 1;
         public const int CargoConstraintsConstraintIdExists = 1;
@@ -126,5 +132,23 @@ namespace LogisticsUnitTests.Data
             Transporter = 1,
             Vehicle = 1
         };
+
+        private static string GetDbConnection()
+        {
+            Debug.WriteLine("BIBA" + Directory.GetCurrentDirectory());
+            var builder = new ConfigurationBuilder()
+                                .SetBasePath(Directory.GetCurrentDirectory())
+                                .AddJsonFile("file.json", optional: true, reloadOnChange: true);
+
+            var connection = builder.Build().GetSection("Connection").Value; ;
+            
+            Debug.WriteLine("BOBA" + connection);
+            return connection;
+        }
+    }
+
+    public class Connection
+    {
+        public string address { get; set; } = "http://localhost:5088";
     }
 }

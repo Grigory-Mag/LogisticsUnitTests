@@ -9,7 +9,7 @@ namespace UnitTests
 {
     internal class DeleteTests
     {
-        private UserService.UserServiceClient client = new UserService.UserServiceClient(GrpcChannel.ForAddress("http://localhost:5088"));
+        private UserService.UserServiceClient client = Data.client;
 
         const string NETWORK_ERROR = "#";
         const string UNEXPECTED_FAIL = "3#";
