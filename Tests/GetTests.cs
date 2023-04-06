@@ -45,7 +45,8 @@ namespace UnitTests
         [Test(ExpectedResult = Data.CargoIdExists)]
         public async Task<int> GetCargoById_Exists()
         {
-            Debug.WriteLine("********** Pupa ************");
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);
             try
             {
                 var item = await client.GetCargoAsync(new GetOrDeleteCargoRequest { Id = Data.CargoIdExists });
