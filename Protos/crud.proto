@@ -111,6 +111,8 @@ service UserService{
   rpc CreateVehiclesTransporter (CreateOrUpdateVehiclesTransportersRequest) returns (VehiclesTransportersObject);
   rpc UpdateVehiclesTransporter (CreateOrUpdateVehiclesTransportersRequest) returns (VehiclesTransportersObject);
   rpc DeleteVehiclesTransporter (GetOrDeleteVehiclesTransportersRequest) returns (VehiclesTransportersObject);
+  /* LOGIN */
+  rpc LoginUser(LoginRequest) returns (LoginReply);
 }
 
 /* * * * * 
@@ -121,11 +123,12 @@ service UserService{
 message CargoObject {
 	int32 id = 1;
 	google.protobuf.Int32Value type = 2;
-	google.protobuf.Int32Value constraints = 3;
-	google.protobuf.DoubleValue weight = 4;
-	google.protobuf.DoubleValue volume = 5;
-	string name = 6;
-	google.protobuf.DoubleValue price = 7;
+	google.protobuf.DoubleValue weight = 3;
+	google.protobuf.DoubleValue volume = 4;
+	string name = 5;
+	google.protobuf.DoubleValue price = 6;
+	ListCargoConstraints constraintsObject = 7;
+	CargoTypesObject cargoType = 8;
 }
 
 message GetOrDeleteCargoRequest{
@@ -501,4 +504,21 @@ message ListVehiclesTransporters{
 
 message CreateOrUpdateVehiclesTransportersRequest {
 	VehiclesTransportersObject VehicleTransporters = 1;
+}
+
+/* * * * * * * * * * * * * *
+*			LOGIN
+* * * * * * * * * * * * * */
+
+message LoginObject{
+	string login = 1;
+	string password = 2;
+}
+
+message LoginRequest{
+	LoginObject data = 1;
+}
+
+message LoginReply{
+	string token = 1;
 }

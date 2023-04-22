@@ -9,33 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Newtonsoft.Json.Linq;
+using LogisticsUnitTests.Handler;
 
 namespace UnitTests
 {
-    internal class GetTests
+    internal class GetTests : TestsHandler
     {
 
         private UserService.UserServiceClient client = Data.client;
-
-        const string NETWORK_ERROR = "#";
-        const string UNEXPECTED_FAIL = "3#";
-
-        private void ExceptionsHandler(RpcException ex)
-        {
-            switch (ex.StatusCode)
-            {
-                case StatusCode.Unavailable:
-                case StatusCode.Unimplemented:
-                case StatusCode.Unknown:
-                case StatusCode.Internal:
-                case StatusCode.ResourceExhausted:
-                    Assert.Fail($"{NETWORK_ERROR,15}\n \'{ex.Message}\' \n{NETWORK_ERROR,15}");
-                    break;
-                default:
-                    Assert.Fail($"{UNEXPECTED_FAIL,15}\n \'{ex.Message}\' \n{UNEXPECTED_FAIL,15}");
-                    break;
-            }
-        }
 
         /*
        * [      TESTS       ]
@@ -45,11 +27,16 @@ namespace UnitTests
         [Test(ExpectedResult = Data.CargoIdExists)]
         public async Task<int> GetCargoById_Exists()
         {
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);
+            //AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
+            //AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);
+            var token = globalToken;
+
             try
             {
-                var item = await client.GetCargoAsync(new GetOrDeleteCargoRequest { Id = Data.CargoIdExists });
+                var headers = new Metadata();
+                headers.Add("Authorization", $"Bearer {token}");
+                Debug.WriteLine( headers );
+                var item = await client.GetCargoAsync(new GetOrDeleteCargoRequest { Id = Data.CargoIdExists }, headers);
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }

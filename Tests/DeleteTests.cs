@@ -1,4 +1,5 @@
 ﻿using Grpc.Core;
+using LogisticsUnitTests.Handler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,29 +8,9 @@ using System.Threading.Tasks;
 
 namespace UnitTests
 {
-    internal class DeleteTests
+    internal class DeleteTests : TestsHandler
     {
         private UserService.UserServiceClient client = Data.client;
-
-        const string NETWORK_ERROR = "#";
-        const string UNEXPECTED_FAIL = "3#";
-
-        private void ExceptionsHandler(RpcException ex)
-        {
-            switch (ex.StatusCode)
-            {
-                case StatusCode.Unavailable:
-                case StatusCode.Unimplemented:
-                case StatusCode.Unknown:
-                case StatusCode.Internal:
-                case StatusCode.ResourceExhausted:
-                    Assert.Fail($"{NETWORK_ERROR,15}\n \'{ex.Message}\' \n{NETWORK_ERROR,15}");
-                    break;
-                default:
-                    Assert.Fail($"{UNEXPECTED_FAIL,15}\n \'{ex.Message}\' \n{UNEXPECTED_FAIL,15}");
-                    break;
-            }
-        }
 
         /*
         * [      TESTS       ]

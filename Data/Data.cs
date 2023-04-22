@@ -33,6 +33,7 @@ namespace LogisticsUnitTests.Data
         public const int VehiclesIdExists = 1;
         public const int VehicleTransportersTransporterIdExists = 1;
         public const int VehicleTransportersVehicleIdExists = 1;
+        public const string LoginExists = "abobusprimadeultima";
 
         public static CargoObject cargoObject = new CargoObject()
         {
@@ -132,23 +133,26 @@ namespace LogisticsUnitTests.Data
             Transporter = 1,
             Vehicle = 1
         };
+        public static LoginObject loginObject = new LoginObject()
+        {
+            Login = "clown",
+            Password = "gigachad"
+        };
 
         private static string GetDbConnection()
         {
-            Debug.WriteLine("BIBA" + Directory.GetCurrentDirectory());
             var builder = new ConfigurationBuilder()
                                 .SetBasePath(Directory.GetCurrentDirectory())
                                 .AddJsonFile("file.json", optional: true, reloadOnChange: true);
 
             var connection = builder.Build().GetSection("Connection").Value; ;
             
-            Debug.WriteLine("BOBA" + connection);
             return connection;
         }
     }
 
     public class Connection
     {
-        public string address { get; set; } = "http://localhost:5088";
+        public string address { get; set; } = "http://localhost:8088";
     }
 }

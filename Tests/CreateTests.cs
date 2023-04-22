@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogisticsUnitTests.Handler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,29 +7,10 @@ using System.Threading.Tasks;
 
 namespace UnitTests
 {
-    internal class CreateTests
+    internal class CreateTests : TestsHandler
     {
-        const string NETWORK_ERROR = "#";
-        const string UNEXPECTED_FAIL = "3#";
-
         private UserService.UserServiceClient client = Data.client;
 
-        private void ExceptionsHandler(RpcException ex)
-        {
-            switch (ex.StatusCode)
-            {
-                case StatusCode.Unavailable:
-                case StatusCode.Unimplemented:
-                case StatusCode.Unknown:
-                case StatusCode.Internal:
-                case StatusCode.ResourceExhausted:
-                    Assert.Fail($"{NETWORK_ERROR,15}\n \'{ex.Message}\' \n{NETWORK_ERROR,15}");
-                    break;
-                default:
-                    Assert.Fail($"{UNEXPECTED_FAIL,15}\n \'{ex.Message}\' \n{UNEXPECTED_FAIL,15}");
-                    break;
-            }
-        }
 
         /*
         * [      TESTS          ]
