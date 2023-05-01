@@ -69,56 +69,6 @@ namespace UnitTests
 
         }
 
-        [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
-        public async Task<int> UpdateCargoConstraintsById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateCargoConstraintAsync(new CreateOrUpdateCargoConstraintsRequest { CargoConstraints = Data.cargoConstraintsObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.IdCargo);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-        }
-
-        [Test(ExpectedResult = Data.ConstraintsIdExists)]
-        public async Task<int> UpdateConstraintsById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateConstraintsAsync(new CreateOrUpdateConstraintsRequest { Constraint = Data.constraintsObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.CustomersIdExists)]
-        public async Task<int> UpdateCustomerById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateCustomerAsync(new CreateOrUpdateCustomersRequest { Customer = Data.customersObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
         [Test(ExpectedResult = Data.DriverLicenceIdExists)]
         public async Task<int> UpdateDriverLicenceById_Exists()
         {
@@ -142,40 +92,6 @@ namespace UnitTests
             try
             {
                 var item = await client.UpdateDriverAsync(new CreateOrUpdateDriversRequest { Driver = Data.driversObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.OrdersIdExists)]
-        public async Task<int> UpdateOrdersById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateOrderAsync(new CreateOrUpdateOrdersRequest { Order = Data.ordersObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.OwnershipsIdExists)]
-        public async Task<int> UpdateOwnershipsById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateOwnershipAsync(new CreateOrUpdateOwnershipsRequest { Ownership = Data.ownershipsObject });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -221,23 +137,6 @@ namespace UnitTests
 
         }
 
-        [Test(ExpectedResult = Data.TransportersIdExists)]
-        public async Task<int> UpdateTransportersById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateTransporterAsync(new CreateOrUpdateTransportersRequest { Transporter = Data.transportersObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
         [Test(ExpectedResult = Data.VehicleTypesIdExists)]
         public async Task<int> UpdateVehicleTypesById_Exists()
         {
@@ -255,7 +154,7 @@ namespace UnitTests
 
         }
 
-        [Test(ExpectedResult = Data.VehiclesIdExists)]
+/*        [Test(ExpectedResult = Data.VehiclesIdExists)]
         public async Task<int> UpdateVehicleById_Exists()
         {
             try
@@ -270,23 +169,7 @@ namespace UnitTests
                 return await Task.FromResult(-1);
             }
 
-        }
+        }*/
 
-        [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
-        public async Task<int> UpdateVehicleTransporterById_Exists()
-        {
-            try
-            {
-                var item = await client.UpdateVehiclesTransporterAsync(new CreateOrUpdateVehiclesTransportersRequest { VehicleTransporters = Data.vehiclesTransportersObject });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Transporter);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
     }
 }

@@ -38,33 +38,17 @@ namespace LogisticsUnitTests.Data
         public static CargoObject cargoObject = new CargoObject()
         {
             Id = 1,
-            Constraints = 1,
+            //Constraints = 1,
             Name = "Name",
             Price = 1,
             Type = 1,
             Volume = 1,
             Weight = 1,
         };
-        public static CargoConstraintsObject cargoConstraintsObject = new CargoConstraintsObject()
-        {
-            IdCargo = 1,
-            IdConstraint = 1,
-        };
         public static CargoTypesObject cargoTypesObject = new CargoTypesObject()
         {
             Id = 1,
             Name = "Name"
-        };
-        public static ConstraintsObject constraintsObject = new ConstraintsObject()
-        {
-            Id = 1,
-            Desc = "Desc"
-        };
-        public static CustomersObject customersObject = new CustomersObject()
-        {
-            Id = 1,
-            Cargo = 1,
-            Requisite = 1
         };
         public static DriverLicenceObject driverLicenceObject = new DriverLicenceObject()
         {
@@ -76,30 +60,18 @@ namespace LogisticsUnitTests.Data
         public static DriversObject driversObject = new DriversObject()
         {
             Id = 1,
-            Licence = 1,
+            //Licence = 1,
             Name = "Name",
             Patronymic = "Patr",
             Sanitation = true,
             Surname = "Surn"
         };
-        public static OrdersObject ordersObject = new OrdersObject()
-        {
-            Id = 1,
-            Cargo = 1,
-            Date = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime())
-        };
-        public static OwnershipsObject ownershipsObject = new OwnershipsObject()
-        {
-            Id = 1,
-            Name = "Name"
-        };
         public static RequestsObject requestsObject = new RequestsObject()
         {
             Id = 1,
             Conditions = true,
-            Order = 1,
             Price = 1,
-            Vehicle = 1
+            //Vehicle = 1
         };
         public static RequisitesObject requisitesObject = new RequisitesObject()
         {
@@ -107,32 +79,22 @@ namespace LogisticsUnitTests.Data
             Ceo = "ООО \"Рога и копыта\"",
             Inn = "123456",
             LegalAddress = "1",
-            Ownership = 1,
+            //Ownership = 1,
             Pts = 1
-        };
-        public static TransportersObject transportersObject = new TransportersObject()
-        {
-            Id = 1,
-            Name = "1"
         };
         public static VehiclesTypesObject vehiclesTypesObject = new VehiclesTypesObject()
         {
             Id = 1,
             Name = "1"
         };
-        public static VehiclesObject vehiclesObject = new VehiclesObject()
+/*        public static VehiclesObject vehiclesObject = new VehiclesObject()
         {
             Id = 1,
             Driver = 1,
             Number = "12314",
             Owner = 1,
             Type = 1
-        };
-        public static VehiclesTransportersObject vehiclesTransportersObject = new VehiclesTransportersObject()
-        {
-            Transporter = 1,
-            Vehicle = 1
-        };
+        };*/
         public static LoginObject loginObject = new LoginObject()
         {
             Login = "clown",

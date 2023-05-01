@@ -23,7 +23,7 @@ namespace UnitTests
         {
             try
             {
-                var item = await client.DeleteCargoAsync(new GetOrDeleteCargoRequest { Id = Data.CargoIdExists });
+                var item = await client.DeleteCargoAsync(new GetOrDeleteCargoRequest { Id = 3});
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -33,23 +33,6 @@ namespace UnitTests
                 return await Task.FromResult(-1);
             }
 
-        }
-
-        [Test(ExpectedResult = Data.CargoConstraintsCargoIdExists)]
-        public async Task<int> DeleteCargoConstraintsById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteCargoConstraintAsync(new GetOrDeleteCargoConstraintsRequest
-                { IdCargo = Data.CargoConstraintsCargoIdExists, IdConstraint = Data.CargoConstraintsConstraintIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.IdCargo);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
         }
 
         [Test(ExpectedResult = Data.CargoTypesIdExists)]
@@ -58,40 +41,6 @@ namespace UnitTests
             try
             {
                 var item = await client.DeleteCargoTypeAsync(new GetOrDeleteCargoTypesRequest { Id = Data.CargoIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.ConstraintsIdExists)]
-        public async Task<int> DeleteConstraintsById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteConstraintAsync(new GetOrDeleteConstraintsRequest { Id = Data.ConstraintsIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.CustomersIdExists)]
-        public async Task<int> DeleteCustomerById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteCustomerAsync(new GetOrDeleteCustomersRequest { Id = Data.CustomersIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -137,40 +86,6 @@ namespace UnitTests
 
         }
 
-        [Test(ExpectedResult = Data.OrdersIdExists)]
-        public async Task<int> DeleteOrdersById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteOrderAsync(new GetOrDeleteOrdersRequest { Id = Data.OrdersIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.OwnershipsIdExists)]
-        public async Task<int> DeleteOwnershipsById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteOwnershipAsync(new GetOrDeleteOwnershipsRequest { Id = Data.OwnershipsIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
         [Test(ExpectedResult = Data.RequestsIdExists)]
         public async Task<int> DeleteRequestsById_Exists()
         {
@@ -194,23 +109,6 @@ namespace UnitTests
             try
             {
                 var item = await client.DeleteRequisiteAsync(new GetOrDeleteRequisitesRequest { Id = Data.RequisitesIdExists });
-                Assert.Pass($"{item}");
-                return await Task.FromResult(item.Id);
-            }
-            catch (RpcException ex)
-            {
-                ExceptionsHandler(ex);
-                return await Task.FromResult(-1);
-            }
-
-        }
-
-        [Test(ExpectedResult = Data.TransportersIdExists)]
-        public async Task<int> DeleteTransportersById_Exists()
-        {
-            try
-            {
-                var item = await client.DeleteTransporterAsync(new GetOrDeleteTransportersRequest { Id = Data.TransportersIdExists });
                 Assert.Pass($"{item}");
                 return await Task.FromResult(item.Id);
             }
@@ -256,7 +154,7 @@ namespace UnitTests
 
         }
 
-        [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
+/*        [Test(ExpectedResult = Data.VehicleTransportersTransporterIdExists)]
         public async Task<int> DeleteVehicleTransporterById_Exists()
         {
             try
@@ -272,6 +170,6 @@ namespace UnitTests
                 return await Task.FromResult(-1);
             }
 
-        }
+        }*/
     }
 }
