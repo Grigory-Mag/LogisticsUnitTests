@@ -21,7 +21,7 @@ namespace UnitTests
         [SetUp]
         public void Setup()
         {
-            
+            var client = GrpcChannel.ForAddress("http://localhost:5088");
         }
 
 
